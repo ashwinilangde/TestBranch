@@ -13,7 +13,12 @@ class UserListViewModel {
     func GetUserList(completion: @escaping ([UserList]) -> Void) {
         ServerResponse().getApiResponse { (UserListModel) in
             CoreDataManager().saveUserInfo(userList: UserListModel)
-            completion(CoreDataManager().getUserList())
+            let userList = CoreDataManager().getUserList()
+            let sortedUsers = userList.sorted {
+                $0.id < $1.id
+            }
+            completion(sortedUsers)
+        
         }
     }
     

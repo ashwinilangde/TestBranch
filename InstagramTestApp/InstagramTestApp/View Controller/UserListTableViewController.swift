@@ -10,45 +10,47 @@ import UIKit
 
 class UserListTableViewController: UITableViewController {
 
+    @IBOutlet var userListTableView: UITableView!
     var userList:[UserList]? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         UserListViewModel().GetUserList { (UserListModel) in
             self.userList = UserListModel
-            print(self.userList)
-            let user:UserList = self.userList![0]
-            print(user.id)
-            
-        }
-        
-       // Reload the table view using the main dispatch queue
-        DispatchQueue.main.async {
-          //tableView.reloadData()
+           // Reload the table view using the main dispatch queue
+           DispatchQueue.main.async {
+               self.userListTableView.reloadData()
+           }
         }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.userList?.count ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UserListTableViewCell", for: indexPath) as! UserListTableViewCell
+        let user:UserList = self.userList![indexPath.row]
+        cell.idLabel.text = "\(user.userId)"
+        cell.titleLabel.text = user.title
+        if user.completed {
+            cell.statusLabel.backgroundColor = .green
+        } else {
+            cell.statusLabel.backgroundColor = .red
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

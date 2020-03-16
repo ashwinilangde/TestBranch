@@ -46,8 +46,8 @@ class CoreDataManager {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserList")
         do {
             let results = try context.fetch(fetchRequest)
-            let  dateCreated = results as! [UserList]
-            return dateCreated
+            let  dataCreated = results as! [UserList]
+            return dataCreated
             
         }catch let err as NSError {
             print(err.debugDescription)

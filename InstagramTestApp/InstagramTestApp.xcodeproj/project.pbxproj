@@ -29,6 +29,7 @@
 		088F588B241EA44F0067A56E /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088F588A241EA44F0067A56E /* UserListViewModel.swift */; };
 		088F588D241EA4670067A56E /* UserListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088F588C241EA4670067A56E /* UserListModel.swift */; };
 		088F5890241EAC0F0067A56E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088F588F241EAC0F0067A56E /* CoreDataManager.swift */; };
+		088F5892241F1C4F0067A56E /* UserListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088F5891241F1C4F0067A56E /* UserListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		088F588A241EA44F0067A56E /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		088F588C241EA4670067A56E /* UserListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListModel.swift; sourceTree = "<group>"; };
 		088F588F241EAC0F0067A56E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		088F5891241F1C4F0067A56E /* UserListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			children = (
 				088F587E241D14660067A56E /* PhotosTableViewCell.swift */,
 				088F5880241D15760067A56E /* UserProfileCollectionViewCell.swift */,
+				088F5891241F1C4F0067A56E /* UserListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				088F5887241E89670067A56E /* ServerResponse.swift in Sources */,
 				081AC70D241CFE7B005EA6C0 /* InstagramTestApp.xcdatamodeld in Sources */,
 				088F5877241D13DC0067A56E /* UserProfileModel.swift in Sources */,
+				088F5892241F1C4F0067A56E /* UserListTableViewCell.swift in Sources */,
 				088F5883241D20E50067A56E /* SceneDelegate.swift in Sources */,
 				088F588D241EA4670067A56E /* UserListModel.swift in Sources */,
 				081AC703241CFE7A005EA6C0 /* AppDelegate.swift in Sources */,
